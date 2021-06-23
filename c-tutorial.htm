@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>let's code | Tutorial | C-Language</title>
+        <link rel="icon" href="images/logo1.png">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/scroll.css">
+        <script src="javascript.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body background="grey">
+        <div class="main-text">
+            <div class="bar">
+                <div class="context"><br><br>
+                    <h3><a href="#NOTES" style="color: darkorange;">NOTES</a></h3>
+                    <a href="c-tutorial.htm" target="_" style="color: green;" onclick="fun1()"><p>C</p></a>
+                    <a href="c++ - tutorial.htm" target="_"><p>C++</p></a>
+                    <a href="python.htm"  target="_"><p>Python</p></a>
+                    <a href="java.htm"  target="_"><p>Java</p></a>
+                    <a href="nopage.htm"  target="_"><p>HTML</p></a>
+                    <a href="nopage.htm"  target="_"><p>CSS</p></a>
+                    <a href="nopage.htm"  target="_"><p>JavaScript</p></a>
+                    <a href="nopage.htm"  target="_"><p>Jquerry</p></a>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav-img">
+                    <img src="images/logo.png" width="180px">
+                    <div class="nav-link">
+                        <a href="index.htm">Home</a>
+                        <a href="#">Contact Us</a>
+                        <a href="courses.htm">Other Courses</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-field">
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular;">C Tutorial</h1>
+                    <p>C programming is a general-purpose, procedural, imperative computer programming language developed in 1972<br> by
+                        Dennis M. Ritchie at the Bell Telephone Laboratories to develop the UNIX operating system.<br> 
+                        C is the most widely used computer language. It keeps fluctuating at number one scale of popularity along with<br> Java programming language,
+                        which is also equally popular and most widely used among modern software programmers.
+                    </p>
+                    <h1 style="font-family: Baloo-Regular;">Applications Of C Programming</h1>
+                    <p>
+                        C was initially used for system development work, particularly the programs that make-up the operating system.<br>
+                        C was adopted as a system development language because it produces code that runs nearly as fast as the code written<br> 
+                        in assembly language. Some examples of the use of C are -
+                    </p>
+                    <br>
+                    <br>
+                        <li>Operating Systems</li><br>
+                        <li>Language Compilers</li><br>
+                        <li>Assemblers</li><br>
+                        <li>Text Editors</li><br>
+                        <li>Print Spoolers</li><br>
+                        <li>Network Drivers</li><br>
+                        <li>Modern Programs</li><br>
+                        <li>DataBases</li><br>
+                        <li>Language Interpreters</li><br>
+                        <li>Utilities</li>
+                </div><br><br>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Linear Search</h1>
+                    <p>
+                        A linear search, also known as a sequential search, is a method of finding an element within a list.<br> 
+                        It checks each element of the list sequentially until a match is found or the whole list has been searched.
+                    </p>
+                    <p>
+                        <li>A simple approach to implement a linear search is</li><br>
+                        <li>Begin with the leftmost element of arr[] and one by one compare x with each element.</li><br>
+                        <li>If x matches with an element then return the index.</li><br>
+                        <li>If x does not match with any of the elements then return -1.</li>
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+int main()
+{
+    int a[20],i,x,n;
+    printf("How many elements?");
+    scanf("%d",&n);
+                                     
+    printf("Enter array elements:n");
+    for(i=0;i< n;++i)
+    scanf("%d",&a[i]);
+    
+    printf("nEnter element to search:");
+    scanf("%d",&x);
+                                     
+    for(i=0;i< n;++i)
+        if(a[i]==x)
+        break;
+                                     
+    if(i< n)
+        printf("Element found at index %d",i);
+    else
+        printf("Element not found");
+                                  
+    return 0;
+}
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Binary Search</h1>
+                    <p>
+                        Search a sorted array by repeatedly dividing the search interval in half. Begin with an interval covering the whole array.<br> 
+                        If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half.<br> 
+                        Otherwise narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.
+                    </p>
+                    <p>
+                        <li>Compare x with the middle element.</li><br>
+                        <li>If x matches with middle element, we return the mid index.</li><br>
+                        <li>Else If x is greater than the mid element, then x can only<br> 
+                            lie in right half subarray after the mid element. So we recur for right half.
+                        </li><br>
+                        <li>Else (x is smaller) recur for the left half.</li>
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre><br>
+int binarySearch(int arr[], int l, int r, int x) 
+{ 
+    if (r >= l) { 
+        int mid = l + (r - l) / 2; 
+                              
+        if (arr[mid] == x) 
+            return mid; 
+                              
+        if (arr[mid] > x) 
+            return binarySearch(arr, l, mid - 1, x); 
+            
+        return binarySearch(arr, mid + 1, r, x); 
+        } 
+        return -1; 
+} 
+                              
+int main(void) 
+{ 
+    int arr[] = { 2, 3, 4, 10, 40 }; 
+    int n = sizeof(arr) / sizeof(arr[0]); 
+    int x = 10; 
+    int result = binarySearch(arr, 0, n - 1, x); 
+    (result == -1) ? printf("Element is not present in array") 
+                    : printf("Element is present at index %d", result); 
+    return 0; 
+} 
+                        </pre>
+                    </div>
+                </div>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Quick Sort</h1>
+                    <p>
+                        QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot.<br>
+                        There are many different versions of quickSort that pick pivot in different ways.
+                    </p>
+                    <p>
+                        <li>Always pick first element as pivot.</li><br>
+                        <li>Always pick last element as pivot.</li><br>
+                        <li>Pick a random element as pivot.</li><br>
+                        <li>Pick median as pivot.</li>
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+void swap(int* a, int* b) 
+{ 
+    int t = *a; 
+    *a = *b; 
+    *b = t; 
+} 
+                            
+int partition (int arr[], int low, int high) 
+{ 
+    int pivot = arr[high];
+    int i = (low - 1);
+                              
+    for (int j = low; j <= high- 1; j++) 
+    { 
+        if (arr[j] < pivot) 
+        { 
+            i++; 
+            swap(&arr[i], &arr[j]); 
+        } 
+    } 
+    swap(&arr[i + 1], &arr[high]); 
+    return (i + 1); 
+} 
+                            
+void quickSort(int arr[], int low, int high) 
+{ 
+    if (low < high) 
+    { 
+        int pi = partition(arr, low, high); 
+                               
+        quickSort(arr, low, pi - 1); 
+        quickSort(arr, pi + 1, high); 
+    } 
+} 
+                            
+void printArray(int arr[], int size) 
+{ 
+    int i; 
+    for (i=0; i < size; i++) 
+        printf("%d ", arr[i]); 
+    printf("\n"); 
+} 
+
+int main() 
+{ 
+    int arr[] = {10, 7, 8, 9, 1, 5}; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
+    quickSort(arr, 0, n-1); 
+    printf("Sorted array: \n"); 
+    printArray(arr, n); 
+    return 0; 
+} 
+                        </pre>
+                    </div>
+                </div>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Merge Sort</h1>
+                    <p>
+                        Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves,<br> 
+                        and then merges the two sorted halves. The merge() function is used for merging two halves. The merge(arr, l, m, r) is a key process<br> 
+                        that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one. See the following C implementation for details
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+void merge(int arr[], int l, int m, int r) 
+{ 
+    int i, j, k; 
+    int n1 = m - l + 1; 
+    int n2 = r - m; 
+                             
+    int L[n1], R[n2]; 
+                             
+    for (i = 0; i < n1; i++) 
+        L[i] = arr[l + i]; 
+    for (j = 0; j < n2; j++) 
+        R[j] = arr[m + 1 + j]; 
+                             
+    i = 0;
+    j = 0;
+    k = l;
+    while (i < n1 && j < n2) { 
+        if (L[i] <= R[j]) { 
+            arr[k] = L[i]; 
+            i++; 
+        } 
+        else { 
+            arr[k] = R[j]; 
+            j++; 
+        } 
+    k++; 
+    } 
+                             
+    while (i < n1) { 
+        arr[k] = L[i]; 
+        i++; 
+        k++; 
+    } 
+                             
+    while (j < n2) { 
+        arr[k] = R[j]; 
+        j++; 
+        k++; 
+    }
+} 
+                             
+void mergeSort(int arr[], int l, int r) 
+{ 
+    if (l < r) { 
+        int m = l + (r - l) / 2; 
+                             
+        mergeSort(arr, l, m); 
+        mergeSort(arr, m + 1, r); 
+                             
+        merge(arr, l, m, r); 
+    } 
+} 
+                            
+void printArray(int A[], int size) 
+{ 
+    int i; 
+    for (i = 0; i < size; i++) 
+        printf("%d ", A[i]); 
+    printf("\n");
+} 
+                            
+int main() 
+{ 
+    int arr[] = { 12, 11, 13, 5, 6, 7 }; 
+    int arr_size = sizeof(arr) / sizeof(arr[0]); 
+                             
+    printf("Given array is \n"); 
+    printArray(arr, arr_size); 
+                             
+    mergeSort(arr, 0, arr_size - 1); 
+                             
+    printf("\nSorted array is \n"); 
+    printArray(arr, arr_size); 
+    return 0;
+}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="footer" style="text-align: center;">
+                <i>&copy; <a style="color: red; font-weight: bolder;">let's code 2020</a></i>
+            </div>
+            <br><br><br>
+        </div>
+    </body>

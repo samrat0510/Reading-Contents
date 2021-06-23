@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>let's code | Tutorial | Java</title>
+        <link rel="icon" href="images/logo1.png">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/scroll.css">
+        <script src="javascript.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body background="grey">
+        <div class="main-text">
+            <div class="bar">
+                <div class="context"><br><br>
+                    <h3><a href="#NOTES" style="color: darkorange;">NOTES</a></h3>
+                    <a href="c-tutorial.htm" target="_"><p>C</p></a>
+                    <a href="c++ - tutorial.htm" target="_"><p>C++</p></a>
+                    <a href="python.htm"  target="_"><p>Python</p></a>
+                    <a href="java.htm"  target="_" style="color: green;" onclick="fun1()"><p>Java</p></a>
+                    <a href="nopage.htm"  target="_"><p>HTML</p></a>
+                    <a href="nopage.htm"  target="_"><p>CSS</p></a>
+                    <a href="nopage.htm"  target="_"><p>JavaScript</p></a>
+                    <a href="nopage.htm"  target="_"><p>Jquerry</p></a>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav-img">
+                    <img src="images/logo.png" width="180px">
+                    <div class="nav-link">
+                        <a href="index.htm">Home</a>
+                        <a href="#">Contact Us</a>
+                        <a href="courses.htm">Other Courses</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-field">
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular;">Java Tutorial</h1>
+                    <p>Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.<br>
+                        Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995.<br> 
+                        James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company,<br>
+                        so James Gosling and his team changed the Oak name to Java.
+                                                
+                    </p>
+                    <h1 style="font-family: Baloo-Regular;">Applications Of Java</h1>
+                    <p>
+                        According to Sun, 3 billion devices run Java. There are many devices where Java is currently used. Some of them are as follows:
+                    </p>
+                    <br>
+                    <br>
+                        <li>Desktop Applications such as acrobat reader, media player, antivirus, etc.</li><br>
+                        <li>Web Applications such as irctc.co.in, javatpoint.com, etc.</li><br>
+                        <li>Enterprise Applications such as banking applications.</li><br>
+                        <li>Mobile</li><br>
+                        <li>Embedded System</li><br>
+                        <li>Smart Card</li><br>
+                        <li>Robotics</li><br>
+                        <li>Games</li>
+                </div><br><br>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Linear Search</h1>
+                    <p>
+                        A linear search, also known as a sequential search, is a method of finding an element within a list.<br> 
+                        It checks each element of the list sequentially until a match is found or the whole list has been searched.
+                    </p>
+                    <p>
+                        <li>A simple approach to implement a linear search is</li><br>
+                        <li>Begin with the leftmost element of arr[] and one by one compare x with each element.</li><br>
+                        <li>If x matches with an element then return the index.</li><br>
+                        <li>If x does not match with any of the elements then return -1.</li>
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+class GFG 
+{
+    public static int search(int arr[], int x)
+        {
+            int n = arr.length;
+            for (int i = 0; i < n; i++) 
+                {
+                    if (arr[i] == x)
+                        return i;
+                }
+            return -1;
+        }
+                             
+    public static void main(String args[])
+        {
+            int arr[] = { 2, 3, 4, 10, 40 };
+            int x = 10;
+                             
+            int result = search(arr, x);
+            if (result == -1)
+                System.out.print("Element is not present in array");
+            else
+                System.out.print("Element is present at index "+ result);
+        }
+}
+                        </pre>
+                    </div>
+                </div>
+                <hr>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Binary Search</h1>
+                    <p>
+                        Search a sorted array by repeatedly dividing the search interval in half. Begin with an interval covering the whole array.<br> 
+                        If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half.<br> 
+                        Otherwise narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.
+                    </p>
+                    <p>
+                        <li>Compare x with the middle element.</li><br>
+                        <li>If x matches with middle element, we return the mid index.</li><br>
+                        <li>Else If x is greater than the mid element, then x can only<br> 
+                            lie in right half subarray after the mid element. So we recur for right half.
+                        </li><br>
+                        <li>Else (x is smaller) recur for the left half.</li>
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre><br>
+class BinarySearch { 
+    int binarySearch(int arr[], int l, int r, int x) 
+        { 
+            if (r >= l) { 
+                int mid = l + (r - l) / 2; 
+                              
+                if (arr[mid] == x) 
+                    return mid; 
+                              
+                if (arr[mid] > x) 
+                    return binarySearch(arr, l, mid - 1, x); 
+                              
+            return binarySearch(arr, mid + 1, r, x); 
+            } 
+                              
+            return -1; 
+        } 
+                              
+    public static void main(String args[]) 
+    { 
+        BinarySearch ob = new BinarySearch(); 
+        int arr[] = { 2, 3, 4, 10, 40 }; 
+        int n = arr.length; 
+        int x = 10; 
+        int result = ob.binarySearch(arr, 0, n - 1, x); 
+        if (result == -1) 
+            System.out.println("Element not present"); 
+        else
+            System.out.println("Element found at index " + result); 
+    } 
+}
+                        </pre>
+                    </div>
+                </div>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Quick Sort</h1>
+                    <p>
+                        QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot.<br>
+                        There are many different versions of quickSort that pick pivot in different ways.
+                    </p>
+                    <p>
+                        <li>Always pick first element as pivot.</li><br>
+                        <li>Always pick last element as pivot.</li><br>
+                        <li>Pick a random element as pivot.</li><br>
+                        <li>Pick median as pivot.</li>
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+class QuickSort 
+{
+    int partition(int arr[], int low, int high) 
+    { 
+        int pivot = arr[high];  
+        int i = (low-1); 
+        for (int j=low; j < high; j++) 
+        { 
+            if (arr[j] < pivot) 
+            { 
+                i++; 
+                              
+                int temp = arr[i]; 
+                arr[i] = arr[j]; 
+                arr[j] = temp; 
+            } 
+        } 
+                              
+        int temp = arr[i+1]; 
+        arr[i+1] = arr[high]; 
+        arr[high] = temp; 
+                              
+        return i+1; 
+    } 
+                              
+    void sort(int arr[], int low, int high) 
+    { 
+        if (low < high) 
+        { 
+            int pi = partition(arr, low, high); 
+                              
+            sort(arr, low, pi-1); 
+            sort(arr, pi+1, high); 
+        } 
+    } 
+                              
+    static void printArray(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i=0; i< n; ++i) 
+            System.out.print(arr[i]+" "); 
+        System.out.println(); 
+    } 
+                              
+    public static void main(String args[]) 
+    { 
+        int arr[] = {10, 7, 8, 9, 1, 5}; 
+        int n = arr.length; 
+                              
+        QuickSort ob = new QuickSort(); 
+        ob.sort(arr, 0, n-1); 
+                              
+        System.out.println("sorted array"); 
+        printArray(arr); 
+    } 
+} 
+                        </pre>
+                    </div>
+                </div>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Merge Sort</h1>
+                    <p>
+                        Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves,<br> 
+                        and then merges the two sorted halves. The merge() function is used for merging two halves. The merge(arr, l, m, r) is a key process<br> 
+                        that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one. See the following C implementation for details
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+class MergeSort {
+    void merge(int arr[], int l, int m, int r)
+    {
+        int n1 = m - l + 1;
+        int n2 = r - m;
+                             
+        int L[] = new int[n1];
+        int R[] = new int[n2];
+        
+        for (int i = 0; i < n1; ++i)
+            L[i] = arr[l + i];
+        for (int j = 0; j < n2; ++j)
+            R[j] = arr[m + 1 + j];
+                             
+        int i = 0, j = 0;
+        
+        int k = l;
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
+                arr[k] = L[i];
+                i++;
+            }
+            else {
+                arr[k] = R[j];
+                j++;
+            }
+        k++;
+        }
+                             
+        while (i < n1) {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+                             
+        while (j < n2) {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
+                             
+    void sort(int arr[], int l, int r)
+    {
+        if (l < r) {
+            int m = (l + r) / 2;
+                             
+            sort(arr, l, m);
+            sort(arr, m + 1, r);
+                             
+            merge(arr, l, m, r);
+        }
+    }
+                             
+    static void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+   }
+                             
+    public static void main(String args[])
+    {
+        int arr[] = { 12, 11, 13, 5, 6, 7 };
+                             
+        System.out.println("Given Array");
+        printArray(arr);
+                             
+        MergeSort ob = new MergeSort();
+        ob.sort(arr, 0, arr.length - 1);
+                             
+        System.out.println("\nSorted array");
+        printArray(arr);
+    }
+}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="footer" style="text-align: center;">
+                <i>&copy; <a style="color: red; font-weight: bolder;">let's code 2020</a></i>
+            </div>
+            <br><br><br>
+        </div>
+    </body>

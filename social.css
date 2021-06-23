@@ -1,0 +1,29 @@
+.social{
+    height: 35%;
+    width: 100px;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 27%;
+    bottom: 0;
+    position: absolute;
+    color: white;
+}
+.social .fa{
+    font-size: 20px;
+    margin: 15px 23px;
+    display: block;
+    position: relative;
+    top: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+.social .fa::after{
+    content: '';
+    margin: auto;
+    transition: 0.5s;
+}
+.social .fa:hover::after{
+    font-size: 25px;
+}
+.social a{
+    text-decoration: none;
+}

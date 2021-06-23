@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>let's code | Tutorial | HTML</title>
+        <link rel="icon" href="images/logo1.png">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/scroll.css">
+        <script src="javascript.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body background="grey">
+        <div class="main-text">
+            <div class="bar">
+                <div class="context"><br><br>
+                    <h3><a href="#NOTES" style="color: darkorange;">NOTES</a></h3>
+                    <a href="c-tutorial.htm" target="_"><p>C</p></a>
+                    <a href="c++ - tutorial.htm" target="_"><p>C++</p></a>
+                    <a href="python.htm"  target="_"><p>Python</p></a>
+                    <a href="java.htm"  target="_" style="color: green;" onclick="fun1()"><p>Java</p></a>
+                    <a href="nopage.htm"  target="_"><p>HTML</p></a>
+                    <a href="nopage.htm"  target="_"><p>CSS</p></a>
+                    <a href="nopage.htm"  target="_"><p>JavaScript</p></a>
+                    <a href="nopage.htm"  target="_"><p>Jquerry</p></a>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav-img">
+                    <img src="images/logo.png" width="180px">
+                    <div class="nav-link">
+                        <a href="index.htm">Home</a>
+                        <a href="#">Contact Us</a>
+                        <a href="courses.htm">Other Courses</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-field">
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular;">HTML Tutorial</h1>
+                    <p>
+    <ul><li>HTML stands for Hyper Text Markup Language
+   <li> HTML is the standard markup language for creating Web pages
+   <li> HTML describes the structure of a Web page
+   <li> HTML consists of a series of elements
+    <li>HTML elements tell the browser how to display the content
+   <li> HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</ul>
+
+                                                
+                    </p>
+                    <h1 style="font-family: Baloo-Regular;">HTML Basics</h1>
+                    <p>
+                        <ul><li>All HTML documents must start with a document type declaration: <!DOCTYPE html>.<br>
+
+<li>The HTML document itself begins with <html> and ends with </html>.<br>
+
+<li>The visible part of the HTML document is between <body> and </body>. </ul>
+                    </p>
+                    <br>
+                    <br>
+                        <li>The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.</li><br>
+                        <li>It must only appear once, at the top of the page (before any HTML tags). </li><br>
+                        <li>The <!DOCTYPE> declaration is not case sensitive.</li><br>
+                        <li>HTML headings are defined with the h1 to h6 tags.</li><br>
+                        <li>HTML paragraphs are defined with the p tag.</li><br>
+                        <li>HTML links are defined with the a tag which means anchor tag. <br>The link's destination is specified in the href attribute. </li><br>
+                        <li>HTML images are defined with the img tag.
+<br>
+                            The source file (src), alternative text (alt), width, and height are provided as attributes.</li><br>
+                        
+                </div><br><br>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">HTML ELEMENTS</h1>
+                    <p>
+                        An HTML element is defined by a start tag, some content, and an end tag.<br>The HTML element is everything from the start tag to the end tag:<br>
+                        //<tagname>Content goes here...</tagname> <br>
+                        HTML elements can be nested (this means that elements can contain other elements).
+<br>
+All HTML documents consist of nested HTML elements.
+                    </p><br><br><br>
+                    <p>
+                        <b><u>NOTE:</u></b>Never rely on forgetting end tag! Unexpected results and errors may occur if you forget the end tag!<br>
+                       <br><br> <li>HTML tags are not case sensitive</li><br>
+                        
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Elements Table:</h1>
+                    <center><img src="images/elements.png"></center>
+                    
+                </div>
+                <hr>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">HTML Table</h1>
+                    <p>
+                        HTML tables allow web developers to arrange data into rows and columns.<br>
+                        The table tag defines an HTML table.<br>
+
+                            Each table row is defined with a tr tag. Each table header is defined with a th tag. Each table data/cell is defined with a td tag.<br>
+                            
+                            By default, the text in th elements are bold and centered.<br>
+                            
+                            By default, the text in td elements are regular and left-aligned.
+                    </p>
+                    <center><img src="images/table1.PNG"></center> 
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">HTML Border</h1>
+                    <p>To add a border to a table, use the CSS border property:</p><br>
+                    <center><img src="images/table2.PNG"></center>
+                    <h1 style="font-family: Baloo-Regular;">Complete HTML Table Summary</h1>
+                    <center><img src="images/table3.PNG"></center>
+                    
+                </div>
+                <!--<div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Quick Sort</h1>
+                    <p>
+                        QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot.<br>
+                        There are many different versions of quickSort that pick pivot in different ways.
+                    </p>
+                    <p>
+                        <li>Always pick first element as pivot.</li><br>
+                        <li>Always pick last element as pivot.</li><br>
+                        <li>Pick a random element as pivot.</li><br>
+                        <li>Pick median as pivot.</li>
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+class QuickSort 
+{
+    int partition(int arr[], int low, int high) 
+    { 
+        int pivot = arr[high];  
+        int i = (low-1); 
+        for (int j=low; j < high; j++) 
+        { 
+            if (arr[j] < pivot) 
+            { 
+                i++; 
+                              
+                int temp = arr[i]; 
+                arr[i] = arr[j]; 
+                arr[j] = temp; 
+            } 
+        } 
+                              
+        int temp = arr[i+1]; 
+        arr[i+1] = arr[high]; 
+        arr[high] = temp; 
+                              
+        return i+1; 
+    } 
+                              
+    void sort(int arr[], int low, int high) 
+    { 
+        if (low < high) 
+        { 
+            int pi = partition(arr, low, high); 
+                              
+            sort(arr, low, pi-1); 
+            sort(arr, pi+1, high); 
+        } 
+    } 
+                              
+    static void printArray(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i=0; i< n; ++i) 
+            System.out.print(arr[i]+" "); 
+        System.out.println(); 
+    } 
+                              
+    public static void main(String args[]) 
+    { 
+        int arr[] = {10, 7, 8, 9, 1, 5}; 
+        int n = arr.length; 
+                              
+        QuickSort ob = new QuickSort(); 
+        ob.sort(arr, 0, n-1); 
+                              
+        System.out.println("sorted array"); 
+        printArray(arr); 
+    } 
+} 
+                        </pre>
+                    </div>
+                </div>
+                <div class="box">
+                    <h1 style="font-family: Baloo-Regular; color: royalblue;">Merge Sort</h1>
+                    <p>
+                        Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves,<br> 
+                        and then merges the two sorted halves. The merge() function is used for merging two halves. The merge(arr, l, m, r) is a key process<br> 
+                        that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one. See the following C implementation for details
+                    </p>
+                    <br><br>
+                    <h1 style="font-family: Baloo-Regular;">Code Snipet</h1>
+                    <div class="code">
+                        <pre>
+class MergeSort {
+    void merge(int arr[], int l, int m, int r)
+    {
+        int n1 = m - l + 1;
+        int n2 = r - m;
+                             
+        int L[] = new int[n1];
+        int R[] = new int[n2];
+        
+        for (int i = 0; i < n1; ++i)
+            L[i] = arr[l + i];
+        for (int j = 0; j < n2; ++j)
+            R[j] = arr[m + 1 + j];
+                             
+        int i = 0, j = 0;
+        
+        int k = l;
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
+                arr[k] = L[i];
+                i++;
+            }
+            else {
+                arr[k] = R[j];
+                j++;
+            }
+        k++;
+        }
+                             
+        while (i < n1) {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+                             
+        while (j < n2) {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
+                             
+    void sort(int arr[], int l, int r)
+    {
+        if (l < r) {
+            int m = (l + r) / 2;
+                             
+            sort(arr, l, m);
+            sort(arr, m + 1, r);
+                             
+            merge(arr, l, m, r);
+        }
+    }
+                             
+    static void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+   }
+                             
+    public static void main(String args[])
+    {
+        int arr[] = { 12, 11, 13, 5, 6, 7 };
+                             
+        System.out.println("Given Array");
+        printArray(arr);
+                             
+        MergeSort ob = new MergeSort();
+        ob.sort(arr, 0, arr.length - 1);
+                             
+        System.out.println("\nSorted array");
+        printArray(arr);
+    }
+}
+                        </pre>
+                    </div>-->
+                </div>
+            </div>
+            <br><br><br>
+            <div class="footer" style="text-align: center;">
+                <i>&copy; <a style="color: red; font-weight: bolder;">let's code 2020</a></i>
+            </div>
+            <br><br><br>
+        </div>
+    </body>

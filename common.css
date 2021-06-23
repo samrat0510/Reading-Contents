@@ -1,0 +1,110 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.nav{
+    background-color: cadetblue;
+    padding: 17px;
+}
+a{
+    text-decoration: none;
+    padding-left: 25px;
+}
+h1{
+    padding-left: 50px;
+    color: chartreuse;
+}
+.nav-link{
+    width: 45%;
+    height: 3em;
+    float: right;
+}
+.nav-link a{
+    position: relative;
+    top: 15px;
+    color: whitesmoke;
+    font-family: Baloo-Regular;
+    font-size: 19px;
+}
+.nav-link a:hover{
+    color: turquoise;
+}
+.nav-img img{
+    margin-left: 40px;
+}
+p{
+    font-family: Baloo-Regular;
+    font-size: 18px;
+}
+pre{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 45px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.code{
+    padding-left: 180px;
+}
+hr{
+    width: 99%;
+}
+pre{
+    width: 16cm;
+    background-color: grey;
+    margin-left: 45px;
+}
+li{
+    margin-left: 150px;
+    font-family: Baloo-regular;
+}
+.nav, .text-field{
+    margin-left: 100px;
+}
+.bar{
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.context{
+    background-color: rgba(255, 255, 0, 0.8);
+    width: 100px;
+    height: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    text-align: center;
+    position: absolute;
+}
+.context h3 a{
+    color: black;
+    font-size: 25px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.context h3 a:hover{
+    font-size: 30px;
+}
+.context p{
+    padding-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.context p:hover{
+    font-size: 25px;
+    color: chocolate;
+}
+.context h3{
+    font-family: Baloo-Regular;
+    margin-left: -30px;
+    text-align: center;
+}
+.text-field{
+    margin-top: 100px;
+}
+.box{
+    text-align: left;
+}
+.box p{
+    margin-left: 50px;
+}
